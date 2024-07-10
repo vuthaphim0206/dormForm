@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PPJLC Dormitory</title>
-        <link
+    <link
       rel="icon"
       href="https://i.pinimg.com/736x/04/08/d6/0408d676048e0f7e271a335d8e3c6a4b.jpg"
       type="image/icon type"
@@ -66,7 +66,21 @@
         </p>
         <p class="text-lg font-bold mt-2">1 Peter 5:6</p>
       </div>
-
+      <!-- New Buttons for Khmer Bible and Bible NLT -->
+      <div class="mt-4 flex justify-center space-x-4">
+        <button
+          id="khmer-bible"
+          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl"
+        >
+          Khmer Bible
+        </button>
+        <button
+          id="bible-nlt"
+          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl"
+        >
+          Bible NLT
+        </button>
+      </div>
       <div class="mt-4 text-center text-green-400">God Bless You!</div>
     </div>
 
@@ -123,6 +137,21 @@
         .getElementById("comment-form")
         .addEventListener("click", function () {
           window.open("https://longcelot.github.io/comment/", "_blank");
+        });
+
+      document
+        .getElementById("khmer-bible")
+        .addEventListener("click", function () {
+          window.open("https://biblecambodia.org/khov54/", "_blank");
+        });
+
+      document
+        .getElementById("bible-nlt")
+        .addEventListener("click", function () {
+          window.open(
+            "https://www.biblegateway.com/versions/New-Living-Translation-NLT-Bible/",
+            "_blank"
+          );
         });
     </script>
   </body>
