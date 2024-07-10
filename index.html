@@ -21,6 +21,22 @@
       .fade-in.visible {
         opacity: 1;
       }
+
+      @keyframes borderMove {
+        0% {
+          box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); /* Initial color (soft blue) */
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); /* Mid color (transparent) */
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); /* Final color (transparent) */
+        }
+      }
+
+      .border-animated {
+        animation: borderMove 3s infinite;
+      }
     </style>
   </head>
   <body
@@ -41,19 +57,19 @@
       <div class="space-y-4">
         <button
           id="check-in-out"
-          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl"
+          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl border-animated"
         >
           Check in, Check out And Cleaning
         </button>
         <button
           id="quiet-time-tracker"
-          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl"
+          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl border-animated"
         >
           Quiet Time Tracker
         </button>
         <button
           id="comment-form"
-          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl"
+          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl border-animated"
         >
           Comment Form
         </button>
