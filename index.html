@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPJLC Dormitory</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .fade-in {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .fade-in.visible {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-green-900 text-white font-sans flex items-center justify-center h-screen"
+  >
+    <div class="bg-green-700 w-full max-w-md p-8 rounded-lg shadow-lg">
+      <h1 class="text-3xl font-bold text-center mb-4">PPJLC Dormitory</h1>
+      <h2
+        id="love-funding"
+        class="text-lg font-semibold text-center mb-2 cursor-pointer"
+      >
+        Love Funding
+      </h2>
+
+      <!-- Image container directly below the "Love Funding" heading -->
+      <div id="image-container" class="flex justify-center mb-6"></div>
+
+      <div class="space-y-4">
+        <button
+          id="check-in-out"
+          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl"
+        >
+          Check in, Check out And Cleaning
+        </button>
+        <button
+          id="quiet-time-tracker"
+          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl"
+        >
+          Quiet Time Tracker
+        </button>
+        <button
+          id="comment-form"
+          class="w-full py-2 bg-green-600 hover:bg-green-500 rounded-lg text-center text-xl"
+        >
+          Comment Form
+        </button>
+      </div>
+
+      <div class="mt-8 text-center">
+        <p class="text-base">
+          6 Humble yourselves, therefore, under God's mighty hand, that he may
+          lift you up in due time.
+        </p>
+        <p class="text-lg font-bold mt-2">1 Peter 5:6</p>
+      </div>
+
+      <div class="mt-4 text-center text-green-400">God Bless You!</div>
+    </div>
+
+    <script>
+      document
+        .getElementById("love-funding")
+        .addEventListener("click", function () {
+          var imageContainer = document.getElementById("image-container");
+          if (imageContainer.hasChildNodes()) {
+            var imgElement = imageContainer.querySelector("img");
+            imgElement.classList.remove("visible");
+            setTimeout(function () {
+              imageContainer.innerHTML = ""; // Remove the image after the transition
+            }, 500);
+          } else {
+            var anchor = document.createElement("a");
+            anchor.href = "https://pay.ababank.com/jS7KMtYVGaRi36W39";
+            anchor.target = "_blank";
+
+            var img = document.createElement("img");
+            img.src =
+              "https://i.pinimg.com/736x/09/99/95/09999584ead32d2df143d409a5e01259.jpg";
+            img.alt = "Love Funding";
+            img.className = "mt-4 rounded-lg shadow-lg fade-in";
+            img.style.width = "200px"; // Adjust the width
+            img.style.height = "auto"; // Maintain aspect ratio
+
+            anchor.appendChild(img);
+            imageContainer.appendChild(anchor);
+
+            // Trigger the fade-in effect
+            setTimeout(function () {
+              img.classList.add("visible");
+            }, 10); // Slight delay to ensure the transition occurs
+          }
+        });
+
+      document
+        .getElementById("check-in-out")
+        .addEventListener("click", function () {
+          window.open(
+            "https://vuthaphim0206.github.io/ppjlc-check-in-out/",
+            "_blank"
+          );
+        });
+
+      document
+        .getElementById("quiet-time-tracker")
+        .addEventListener("click", function () {
+          window.open("https://longcelot.github.io/QT-Tracker/", "_blank");
+        });
+
+      document
+        .getElementById("comment-form")
+        .addEventListener("click", function () {
+          window.open("https://longcelot.github.io/comment/", "_blank");
+        });
+    </script>
+  </body>
+</html>
